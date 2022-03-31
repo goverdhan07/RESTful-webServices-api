@@ -9,7 +9,7 @@ import java.util.List;
 public class ProductService {
 
     @Autowired //this is used for injection
-    public ProductRepository repo;
+    private ProductRepository repo;
 
     public List<Product> listAll(){
         return repo.findAll();

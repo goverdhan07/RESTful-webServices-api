@@ -10,18 +10,17 @@ import java.util.List;
 @RestController //A controller basically controls the flow of the data.
 public class ProductController {
     @Autowired
-    public ProductService service;
+    private ProductService service;
 
     @GetMapping("/products")
     public List<Product> list() {
         return service.listAll();
     }
-
+}
 //    public void save(Product product) {
 //        service.save(product);
 //    }
-}
-
+//
 //    @GetMapping("/products/{id}")
 //    public Product get(@PathVariable Integer id){
 //        return service.get(id);
